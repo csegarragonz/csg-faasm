@@ -3,8 +3,14 @@
 + Copy the compiled binary to `wasm/<user>/<funcion>/function.wasm` (e.g. `wasm/lammps/test/function.wasm`)
 + Run the code generation and the actual function:
 ```bash
+# Generate machine code from the generated `wasm` file.
 inv codegen <user> <function> # inv codegen lammps test
-inv run <user> <function> # inv run lammps test
+
+# Compile the runner
+inv dev.cc lammps_runner
+
+# Run the function (remember to upload data if necessary)
+lammps_runner <user> <function> # inv run lammps test
 ```
 
 ## Use a custom data file as input
