@@ -32,3 +32,12 @@ error: ld returned 1 exit status
 + Usually the symbol is not defined in `wasi-libc`
 + Either we include it - then see [this doc](./extending_libc.md) - or we 
 discard it.
+
+## LLVM Complaining of Undefined Symbols
++ Problem at runtime (not compilation time)
++ Example:
+```
+LLVM generated code references unknown external symbol: functionDefMutableDatas5824
+```
++ This is usually due to a missmatch between the `wasm` file and the actual machine code.
++ Solution: run the `codegen` script again!
