@@ -1,12 +1,3 @@
-+ Run tests
-```bash
-inv dev.cc tests
-# Run single test
-tests "<some test name>"
-# Run all tests
-tests
-```
-
 + Reset to a working state from Github
 ```bash
 rm -r build
