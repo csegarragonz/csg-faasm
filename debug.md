@@ -3,3 +3,4 @@
 ```bash
 inv wast <user> <function>
 ```
+
