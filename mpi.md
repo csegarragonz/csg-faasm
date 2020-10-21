@@ -9,6 +9,9 @@
   + Source code for it lives in:  `faabric/src/scheduler/MpiWorld.cpp`.
   + Note that there's an `MpiWorld` per host.
 
+### Support Features
++ Currently probe disregards the tag. Should we do it?
+
 ### MPI Init
 + As soon as we call `MPI_Init`:
   + A new world is created by calling `MpiContext::createWorld` or `MpiContext::joinWorld` depending whether you are root or not.

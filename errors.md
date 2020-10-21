@@ -41,3 +41,14 @@ LLVM generated code references unknown external symbol: functionDefMutableDatas5
 ```
 + This is usually due to a missmatch between the `wasm` file and the actual machine code.
 + Solution: run the `codegen` script again!
+
+## Some random library not found
++ Problem at runtime, as the linker is failing to find an (existing) library.
++ Example:
+```bash
+error while loading shared libraries: libpistache.so.0: cannot open shared object file: No such file or directory
+```
++ Sometimes the `ld.so` cache needs to be refreshed. Running the following could just do it:
+```bash
+sudo ldconfig
+```
