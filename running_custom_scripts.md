@@ -1,6 +1,8 @@
 ## Run a custom script with a helper binary:
+
 + Install it in some relative path to the build dir (e.g. `../install`).
-+ Copy the compiled binary to `wasm/<user>/<funcion>/function.wasm` (e.g. `wasm/lammps/test/function.wasm`)
++ Copy the compiled binary to `wasm/<user>/<funcion>/function.wasm` (e.g.
+`wasm/lammps/test/function.wasm`)
 + Run the code generation and the actual function:
 ```bash
 # Generate machine code from the generated `wasm` file.
